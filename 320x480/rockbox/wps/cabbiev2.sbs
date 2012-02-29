@@ -1,0 +1,74 @@
+# THEME       : cabbiev2
+# TARGET(S)   : Rockbox as an Application 240x320 Portrait
+# AUTHOR      : Hayden Pearce
+# DATE        : © Hayden Pearce 01/03/12 Thursday 1st - March - 2012
+#
+# DISABLE STATUSBAR
+#
+%wd
+#
+# BACKDROP
+#
+%X(cabbiev2-backdrop-320x480x24.bmp)
+#
+# PRELOAD IMAGES
+#
+%xl(fastforward,cabbiev2-fastforward-320x480x24.bmp,2,6,2)
+%xl(playmode,cabbiev2-playmode-320x480x24.bmp,2,6,5)
+%xl(repeat,cabbiev2-repeat-320x480x24.bmp,2,4,5)
+%xl(rewind,cabbiev2-rewind-320x480x24.bmp,2,6,2)
+%xl(shuffle,cabbiev2-shuffle-320x480x24.bmp,2,13,2)
+%xl(titlebar,cabbiev2-titlebar-320x480x24.bmp,6,6,25)
+%xl(volume-backdrop,cabbiev2-volume-backdrop-320x480x24.bmp,0,0)
+#
+# FASTFORWARD/NEXT
+#
+%V(269,423,51,57,-)
+%T(0,0,51,57,wps_next)
+%T(0,0,51,57,ffwd,repeat_press)
+%?mp<%xd(fastforward,2)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)>
+#
+# PLAYMODE
+#
+%V(220,423,49,57,-)
+%T(0,0,49,57,play)
+%T(0,0,49,57,stop,long_press)
+%?mp<%xd(playmode,1)|%xd(playmode,3)|%xd(playmode,2)|%xd(playmode,4)|%xd(playmode,5)|%xd(playmode,3)|%xd(playmode,2)|%xd(playmode,3)|%xd(playmode,2)>
+#
+# REPEAT
+#
+%V(62,423,40,57,-)
+%T(0,0,40,57,repmode)
+%T(0,0,40,57,setting_set,repeat,off,long_press)
+%?mm<%xd(repeat,1)|%xd(repeat,2)|%xd(repeat,3)|%xd(repeat,4)|%xd(repeat,5)>
+#
+# REWIND/PREVIOUS
+#
+%V(171,423,49,57,-)
+%T(0,0,49,57,wps_prev)
+%T(0,0,49,57,rwd,repeat_press)
+%?mp<%xd(rewind,2)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)>
+#
+# SHUFFLE
+#
+%V(102,423,69,57,-)
+%T(0,0,69,57,shuffle)
+%T(0,0,69,57,setting_set,shuffle,off,long_press)
+%?ps<%xd(shuffle,1)|%xd(shuffle,2)>
+#
+# TITLEBAR
+#
+%V(10,4,300,32,-)
+%T(0,0,300,32,menu)
+%T(0,0,300,32,lock,long_press)
+%?bp<%?bc<%xd(titlebar,2)|%xd(titlebar,3)>|%?cs<%xd(titlebar,4)||%?Rp<%xd(titlebar,9)>|%?tp<%xd(titlebar,10)>|%xd(titlebar,11)|%xd(titlebar,12)|%xd(titlebar,13)|%xd(titlebar,14)|%xd(titlebar,15)|%xd(titlebar,16)|%xd(titlebar,17)|%xd(titlebar,18)|%xd(titlebar,19)|%xd(titlebar,20)|%xd(titlebar,21)|%xd(titlebar,22)|%xd(titlebar,23)|%xd(titlebar,24)|%xd(titlebar,25)>>
+#
+# VOLUME
+#
+%V(0,423,62,57,-)
+%T(0,0,62,57,mute,long_press)
+%pv(6,5,34,23,cabbiev2-volume-240x320x24.bmp,backdrop,volume-backdrop)
+#
+# UI VIEWPORT
+#
+%Vi(-,12,44,308,374,-)

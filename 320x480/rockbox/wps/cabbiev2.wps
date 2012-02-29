@@ -1,0 +1,176 @@
+# THEME       : cabbiev2
+# TARGET(S)   : Rockbox as an Application 240x320 Portrait
+# AUTHOR      : Hayden Pearce
+# DATE        : © Hayden Pearce 01/03/12 Thursday 1st - March - 2012
+#
+# DISABLE STATUSBAR
+#
+%wd
+#
+# BACKDROP
+#
+%X(cabbiev2-backdrop-320x480x24.bmp)
+#
+# PRELOAD FONTS
+#
+%Fl(2,20-cabbiev2-[bold].fnt)
+%Fl(3,20-cabbiev2-[regular].fnt)
+%Fl(4,24-cabbiev2-[bold].fnt)
+%Fl(5,24-cabbiev2-[regular].fnt)
+#
+# PRELOAD IMAGES
+#
+%xl(albumart-backdrop,cabbiev2-albumart-backdrop-320x480x24.bmp,0,0)
+%xl(fastforward,cabbiev2-fastforward-320x480x24.bmp,2,6,2)
+%xl(playmode,cabbiev2-playmode-320x480x24.bmp,2,6,5)
+%xl(popup,cabbiev2-popup-320x480x24.bmp,0,0)
+%xl(progressbar-backdrop,cabbiev2-progressbar-backdrop-320x480x24.bmp,0,0)
+%xl(repeat,cabbiev2-repeat-320x480x24.bmp,2,4,5)
+%xl(rewind,cabbiev2-rewind-320x480x24.bmp,2,6,2)
+%xl(shuffle,cabbiev2-shuffle-320x480x24.bmp,2,13,2)
+%xl(titlebar,cabbiev2-titlebar-320x480x24.bmp,6,6,25)
+%xl(unlock-notification,cabbiev2-unlock-notification-320x480x24.bmp,0,0)
+%xl(volume-backdrop,cabbiev2-volume-backdrop-320x480x24.bmp,0,0)
+%xl(volume-popup,cabbiev2-volume-popup-320x480x24.bmp,0,0)
+%xl(volumebar-backdrop,cabbiev2-volumebar-backdrop-320x480x24.bmp,0,0)
+#
+# VIEWPORT CONDITIONS
+#
+%?C<%Vd(albumart-viewport)%?vl(variable,4.0)<%?vg(variable)<%Vd(popup-viewport)|%Vd(volume-popup-viewport)>|%Vd(current-track-albumart-viewport)%Vd(next-track-albumart-viewport)>|%Vd(current-track-no-albumart-viewport)%?vl(variable,4.0)<%?vg(variable)<%Vd(popup-viewport)|%Vd(volume-popup-viewport)>|%Vd(next-track-no-albumart-viewport)>>
+#
+# ALBUM ART
+#
+%Vl(albumart-viewport,60,44,200,200,-)
+%T(albumart-touch,4,4,192,192,none)
+%T(4,4,192,192,hotkey,long_press)
+%Cl(4,4,192,192,c,c)
+%xd(albumart-backdrop)
+%Cd
+
+
+
+
+
+%?Tl(albumart-touch,0.1)<%vs(variable,set,1)>
+#
+# CURRENT TRACK INFO - ALBUM ART
+#
+%ax%Vl(current-track-albumart-viewport,12,258,296,60,2)
+%s%ac%?it<%it|%fn>
+%s%ac%?ia<%ia|%?d(2)<%d(2)|%(root%)>>
+%s%ac%?id<%id|%?d(1)<%d(1)|%(root%)>>
+#
+# CURRENT TRACK INFO - NO ALBUM ART
+#
+%ax%Vl(current-track-no-albumart-viewport,12,72,296,144,4)
+%T(current-track-no-albumart-touch,0,0,296,132,none)
+%T(0,0,296,132,hotkey,long_press)
+%s%ac%?it<%it|%fn>
+%s%ac%?ia<%ia|%?d(2)<%d(2)|%(root%)>>
+%s%ac%?id<%id|%?d(1)<%d(1)|%(root%)>>
+%ac%?ig<%ig|%?iy<%iy|%?fv<%(VBR%) >%fbKb/s %fc>>
+%ac%?ig<%?iy<%iy|%?fv<%(VBR%) >%fbKb/s %fc>>
+%ac%?iy<%?fv<%(VBR%) >%fbKb/s %fc>
+
+
+
+
+
+%?Tl(current-track-no-albumart-touch,0.1)<%vs(variable,set,1)>
+#
+# FASTFORWARD/NEXT
+#
+%V(269,423,51,57,-)
+%T(0,0,51,57,next)
+%T(0,0,51,57,ffwd,repeat_press)
+%?mp<%xd(fastforward,2)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)||||>
+#
+# NEXT TRACK INFO - ALBUM ART
+#
+%ax%Vl(next-track-albumart-viewport,12,318,296,40,3)
+%T(0,0,296,44,next,long_press)
+%s%ac%?Fn<%Sx(Next Track:)|%?ig<%ig>>
+%s%ac%?Fn<%t(10.0)%?It<%It|%Fn>;%t(10.0)%?Ia<%Ia|%?D(2)<%D(2)|%(root%)>> - %?Id<%Id|%?D(1)<%D(1)|%(root%)>>|%?iy<%iy>>
+#
+# NEXT TRACK INFO - NO ALBUM ART
+#
+%ax%Vl(next-track-no-albumart-viewport,12,272,296,72,5)
+%T(0,0,296,66,next,long_press)
+%s%ac%?Fn<%Sx(Next Track:)>
+%s%ac%?Fn<%?It<%It|%Fn>>
+%s%ac%?Fn<%?Ia<%Ia|%?D(2)<%D(2)|%(root%)>>>
+%s%ac%?Fn<%?Id<%Id|%?D(1)<%D(1)|%(root%)>>>
+#
+# PLAYMODE
+#
+%V(220,423,49,57,-)
+%T(0,0,49,57,play)
+%T(0,0,49,57,stop,long_press)
+%?mp<%xd(playmode,1)|%xd(playmode,3)|%xd(playmode,2)|%xd(playmode,4)|%xd(playmode,5)||||>
+#
+# POPUP
+#
+%Vl(popup-viewport,12,258,296,100,-)
+%T(6,6,95,88,browse)
+%T(101,6,94,88,quickscreen)
+%T(195,6,95,88,contextmenu)
+%xd(popup)
+#
+# PROGRESSBAR
+#
+%V(14,363,292,32,-)
+%T(0,0,292,32,progressbar)
+%pb(6,6,280,20,cabbiev2-progressbar-320x480x24.bmp,backdrop,progressbar-backdrop)
+#
+# REPEAT
+#
+%V(62,423,40,57,-)
+%T(0,0,40,57,repmode)
+%T(0,0,40,57,setting_set,repeat,off,long_press)
+%?mm<%xd(repeat,1)|%xd(repeat,2)|%xd(repeat,3)|%xd(repeat,4)|%xd(repeat,5)>
+#
+# REWIND/PREVIOUS
+#
+%V(171,423,49,57,-)
+%T(0,0,49,57,prev)
+%T(0,0,49,57,rwd,repeat_press)
+%?mp<%xd(rewind,2)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)||||>
+#
+# SHUFFLE
+#
+%V(102,423,69,57,-)
+%T(0,0,69,57,shuffle)
+%T(0,0,69,57,setting_set,shuffle,off,long_press)
+%?ps<%xd(shuffle,1)|%xd(shuffle,2)>
+#
+# TITLEBAR
+#
+%V(10,4,300,36,-)
+%T(0,0,300,36,menu)
+%T(0,0,300,36,lock,long_press)
+%?if(%mh,=,t)<%?Tl(2.0)<%xd(unlock-notification)|%xd(titlebar,1)>|%?mp<|%xd(titlebar,5)|%xd(titlebar,6)|%xd(titlebar,7)|%xd(titlebar,8)||||>>
+#
+# TIME ELAPSED/REMAINING
+#
+%V(12,399,296,22,3)
+%al%pc%ac%?mv(2.0)<%vs(variable,set,2)%?Sr<dB%pv :%Sx(Volume)|%Sx(Volume): %pvdB>|%?Sr<%pe %Sx(of) %pp|%pp %Sx(of) %pe>>%ar-%pr
+#
+# VOLUME
+#
+%V(0,423,62,57,-)
+%Tvolume-touch,0,0,62,57,none)
+%T(0,0,62,57,mute,long_press)
+%pv(4,8,56,40,cabbiev2-volume-320x480x24.bmp,backdrop,volume-backdrop)
+
+
+
+
+
+%?Tl(volume-touch,0.1)<%vs(variable,set,2)>
+#
+# VOLUME POPUP
+#
+%Vl(volume-popup-viewport,12,258,296,100,-)
+%T(6,6,284,88,volume)
+%xd(volume-popup)
+%pv(18,40,260,20,cabbiev2-volumebar-320x480x24.bmp,backdrop,volumebar-backdrop)
