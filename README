@@ -5,7 +5,7 @@
      Firmware   |____|_  /\____/ \___  >__|_ \|___  /\____/__/\_ \
                        \/            \/     \/    \/            \/
 
-Copyright (C) 2012 Hayden Pearce
+Copyright (C) 2011-2012 Hayden Pearce
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -20,6 +20,14 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+Summary:
+
+This is a project to create an enhanced version of the Rockbox
+default theme for use with Rockbox as an Application which aims
+to keep the same familiar style whilst also adding additional
+features needed for ease of use with touchscreen devices.
 
 
 Contact:
