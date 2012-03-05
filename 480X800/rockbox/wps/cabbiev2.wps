@@ -28,7 +28,7 @@
 %xl(repeat,cabbiev2-repeat-480x800x24.bmp,3,12,5)
 %xl(rewind,cabbiev2-rewind-480x800x24.bmp,3,10,2)
 %xl(shuffle,cabbiev2-shuffle-480x800x24.bmp,3,22,2)
-%xl(titlebar,cabbiev2-titlebar-480x800x24.bmp,10,10,25)
+%xl(titlebar,cabbiev2-titlebar-480x800x24.bmp,10,10,26)
 %xl(unlock-notification,cabbiev2-unlock-notification-480x800x24.bmp,0,0)
 %xl(volume-backdrop,cabbiev2-volume-backdrop-480x800x24.bmp,0,0)
 %xl(volume-popup,cabbiev2-volume-popup-480x800x24.bmp,0,0)

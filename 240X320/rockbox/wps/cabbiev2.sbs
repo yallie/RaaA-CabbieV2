@@ -18,7 +18,7 @@
 %xl(repeat,cabbiev2-repeat-240x320x24.bmp,6,5,5)
 %xl(rewind,cabbiev2-rewind-240x320x24.bmp,6,5,2)
 %xl(shuffle,cabbiev2-shuffle-240x320x24.bmp,6,5,2)
-%xl(titlebar,cabbiev2-titlebar-240x320x24.bmp,5,5,25)
+%xl(titlebar,cabbiev2-titlebar-240x320x24.bmp,5,5,26)
 %xl(volume-backdrop,cabbiev2-volume-backdrop-240x320x24.bmp,0,0)
 #
 # FASTFORWARD/NEXT
@@ -61,7 +61,7 @@
 %V(16,3,208,24,-)
 %T(0,0,208,24,menu)
 %T(0,0,208,24,quickscreen,long_press)
-%?bp<%?bc<%xd(titlebar,2)|%xd(titlebar,3)>|%?cs<%xd(titlebar,4)||%?Rp<%xd(titlebar,9)>|%?tp<%xd(titlebar,10)>|%xd(titlebar,11)|%xd(titlebar,12)|%xd(titlebar,13)|%xd(titlebar,14)|%xd(titlebar,15)|%xd(titlebar,16)|%xd(titlebar,17)|%xd(titlebar,18)|%xd(titlebar,19)|%xd(titlebar,20)|%xd(titlebar,21)|%xd(titlebar,22)|%xd(titlebar,23)|%xd(titlebar,24)|%xd(titlebar,25)>>
+%?bp<%?bc<%xd(titlebar,2)|%xd(titlebar,3)>|%?cs<%xd(titlebar,4)||%?Rp<%xd(titlebar,9)>|%?tp<%xd(titlebar,10)>|%xd(titlebar,11)|%xd(titlebar,12)|%xd(titlebar,13)|%xd(titlebar,14)|%xd(titlebar,15)|%xd(titlebar,16)|%xd(titlebar,17)|%xd(titlebar,18)|%xd(titlebar,19)|%xd(titlebar,20)|%xd(titlebar,21)|%xd(titlebar,22)|%xd(titlebar,23)|%xd(titlebar,24)|%xd(titlebar,25)|%xd(titlebar,26)>>
 #
 # VOLUME
 #
