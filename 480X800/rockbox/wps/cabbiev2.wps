@@ -158,7 +158,7 @@
 # VOLUME
 #
 %V(0,708,96,90,-)
-%T(i,0,0,96,90,none)
+%T(volume-touch,0,0,96,90,none)
 %T(0,0,96,90,mute,long_press)
 %pv(5,12,88,66,cabbiev2-volume-480x800x24.bmp,backdrop,volume-backdrop)
 
@@ -170,7 +170,7 @@
 #
 # VOLUME POPUP
 #
-%Vl(j,20,402,440,165,-)
+%Vl(volume-popup-viewport,20,402,440,165,-)
 %T(15,15,410,135,volume)
 %xd(volume-popup)
 %pv(25,67,390,31,cabbiev2-volumebar-480x800x24.bmp,backdrop,volumebar-backdrop)

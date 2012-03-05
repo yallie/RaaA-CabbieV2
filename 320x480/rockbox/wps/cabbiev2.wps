@@ -158,7 +158,7 @@
 # VOLUME
 #
 %V(0,423,62,57,-)
-%Tvolume-touch,0,0,62,57,none)
+%T(volume-touch,0,0,62,57,none)
 %T(0,0,62,57,mute,long_press)
 %pv(4,8,56,40,cabbiev2-volume-320x480x24.bmp,backdrop,volume-backdrop)
 
