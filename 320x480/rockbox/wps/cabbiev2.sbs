@@ -60,14 +60,14 @@
 #
 %V(10,4,300,32,-)
 %T(0,0,300,32,menu)
-%T(0,0,300,32,lock,long_press)
+%T(0,0,300,32,quickscreen,long_press)
 %?bp<%?bc<%xd(titlebar,2)|%xd(titlebar,3)>|%?cs<%xd(titlebar,4)||%?Rp<%xd(titlebar,9)>|%?tp<%xd(titlebar,10)>|%xd(titlebar,11)|%xd(titlebar,12)|%xd(titlebar,13)|%xd(titlebar,14)|%xd(titlebar,15)|%xd(titlebar,16)|%xd(titlebar,17)|%xd(titlebar,18)|%xd(titlebar,19)|%xd(titlebar,20)|%xd(titlebar,21)|%xd(titlebar,22)|%xd(titlebar,23)|%xd(titlebar,24)|%xd(titlebar,25)|%xd(titlebar,26)>>
 #
 # VOLUME
 #
 %V(0,423,62,57,-)
 %T(0,0,62,57,mute,long_press)
-%pv(6,5,34,23,cabbiev2-volume-240x320x24.bmp,backdrop,volume-backdrop)
+%pv(4,8,56,40,cabbiev2-volume-320x480x24.bmp,backdrop,volume-backdrop)
 #
 # UI VIEWPORT
 #
