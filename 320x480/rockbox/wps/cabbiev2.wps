@@ -1,7 +1,7 @@
 # THEME       : cabbiev2
 # TARGET(S)   : Rockbox as an Application 320x480 Portrait
 # AUTHOR      : Hayden Pearce
-# DATE        : © Hayden Pearce 06/03/12 Tuesday 6th - March - 2012
+# DATE        : © Hayden Pearce 02/04/12 Monday 2nd - April - 2012
 #
 # DISABLE STATUSBAR
 #
@@ -24,14 +24,17 @@
 %xl(fastforward,cabbiev2-fastforward-320x480x24.bmp,2,6,2)
 %xl(playmode,cabbiev2-playmode-320x480x24.bmp,2,6,5)
 %xl(popup,cabbiev2-popup-320x480x24.bmp,0,0)
+%xl(progressbar,cabbiev2-progressbar-320x480x24.bmp,0,0)
 %xl(progressbar-backdrop,cabbiev2-progressbar-backdrop-320x480x24.bmp,0,0)
 %xl(repeat,cabbiev2-repeat-320x480x24.bmp,2,4,5)
 %xl(rewind,cabbiev2-rewind-320x480x24.bmp,2,6,2)
 %xl(shuffle,cabbiev2-shuffle-320x480x24.bmp,2,13,2)
 %xl(titlebar,cabbiev2-titlebar-320x480x24.bmp,6,6,26)
 %xl(unlock-notification,cabbiev2-unlock-notification-320x480x24.bmp,0,0)
+%xl(volume,cabbiev2-volume-320x480x24.bmp,0,0)
 %xl(volume-backdrop,cabbiev2-volume-backdrop-320x480x24.bmp,0,0)
 %xl(volume-popup,cabbiev2-volume-popup-320x480x24.bmp,0,0)
+%xl(volumebar,cabbiev2-volumebar-320x480x24.bmp,0,0)
 %xl(volumebar-backdrop,cabbiev2-volumebar-backdrop-320x480x24.bmp,0,0)
 #
 # VIEWPORT CONDITIONS
@@ -55,14 +58,14 @@
 #
 # CURRENT TRACK INFO - ALBUM ART
 #
-%ax%Vl(current-track-albumart-viewport,12,258,296,60,2)
+%Vl(current-track-albumart-viewport,12,258,296,60,2)
 %s%ac%?it<%it|%fn>
 %s%ac%?ia<%ia|%?d(2)<%d(2)|%(root%)>>
 %s%ac%?id<%id|%?d(1)<%d(1)|%(root%)>>
 #
 # CURRENT TRACK INFO - NO ALBUM ART
 #
-%ax%Vl(current-track-no-albumart-viewport,12,72,296,144,4)
+%Vl(current-track-no-albumart-viewport,12,72,296,144,4)
 %T(current-track-no-albumart-touch,0,0,296,132,none)
 %T(0,0,296,132,hotkey,long_press)
 %s%ac%?it<%it|%fn>
@@ -87,14 +90,14 @@
 #
 # NEXT TRACK INFO - ALBUM ART
 #
-%ax%Vl(next-track-albumart-viewport,12,318,296,40,3)
+%Vl(next-track-albumart-viewport,12,318,296,40,3)
 %T(0,0,296,44,next,long_press)
 %s%ac%?Fn<%Sx(Next Track:)|%?ig<%ig>>
 %s%ac%?Fn<%t(10.0)%?It<%It|%Fn>;%t(10.0)%?Ia<%Ia|%?D(2)<%D(2)|%(root%)>> - %?Id<%Id|%?D(1)<%D(1)|%(root%)>>|%?iy<%iy>>
 #
 # NEXT TRACK INFO - NO ALBUM ART
 #
-%ax%Vl(next-track-no-albumart-viewport,12,272,296,72,5)
+%Vl(next-track-no-albumart-viewport,12,272,296,72,5)
 %T(0,0,296,66,next,long_press)
 %s%ac%?Fn<%Sx(Next Track:)>
 %s%ac%?Fn<%?It<%It|%Fn>>
@@ -120,7 +123,7 @@
 #
 %V(14,363,292,32,-)
 %T(0,0,292,32,progressbar)
-%pb(6,6,280,20,cabbiev2-progressbar-320x480x24.bmp,backdrop,progressbar-backdrop)
+%?Sr<%pb(6,6,280,20,image,progressbar,backdrop,progressbar-backdrop,invert)|%pb(6,6,280,20,image,progressbar,backdrop,progressbar-backdrop)>
 #
 # REPEAT
 #
@@ -153,14 +156,14 @@
 # TIME ELAPSED/REMAINING
 #
 %V(12,399,296,22,3)
-%al%pc%ac%?mv(2.0)<%vs(variable,set,2)%?Sr<dB%pv :%Sx(Volume)|%Sx(Volume): %pvdB>|%?Sr<%pe %Sx(of) %pp|%pp %Sx(of) %pe>>%ar-%pr
+%aL%pc%ac%?mv(2.0)<%vs(variable,set,2)%?Sr<dB%pv :%Sx(Volume)|%Sx(Volume): %pvdB>|%?Sr<%pe %Sx(of) %pp|%pp %Sx(of) %pe>>%aR-%pr
 #
 # VOLUME
 #
 %V(0,423,62,57,-)
 %T(volume-touch,0,0,62,57,none)
 %T(0,0,62,57,mute,long_press)
-%pv(4,8,56,40,cabbiev2-volume-320x480x24.bmp,backdrop,volume-backdrop)
+%pv(4,8,56,40,image,volume,backdrop,volume-backdrop)
 
 
 
@@ -173,4 +176,4 @@
 %Vl(volume-popup-viewport,12,258,296,100,-)
 %T(6,6,284,88,volume)
 %xd(volume-popup)
-%pv(18,40,260,20,cabbiev2-volumebar-320x480x24.bmp,backdrop,volumebar-backdrop)
+%pv(18,40,260,20,image,volumebar,backdrop,volumebar-backdrop)

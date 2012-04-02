@@ -1,7 +1,7 @@
 # THEME       : cabbiev2
 # TARGET(S)   : Rockbox as an Application 320x480 Portrait
 # AUTHOR      : Hayden Pearce
-# DATE        : © Hayden Pearce 06/03/12 Tuesday 6th - March - 2012
+# DATE        : © Hayden Pearce 02/04/12 Monday 2nd - April - 2012
 #
 # DISABLE STATUSBAR
 #
@@ -19,6 +19,7 @@
 %xl(rewind,cabbiev2-rewind-320x480x24.bmp,2,6,2)
 %xl(shuffle,cabbiev2-shuffle-320x480x24.bmp,2,13,2)
 %xl(titlebar,cabbiev2-titlebar-320x480x24.bmp,6,6,26)
+%xl(volume,cabbiev2-volume-320x480x24.bmp,0,0)
 %xl(volume-backdrop,cabbiev2-volume-backdrop-320x480x24.bmp,0,0)
 #
 # FASTFORWARD/NEXT
@@ -26,7 +27,7 @@
 %V(269,423,51,57,-)
 %T(0,0,51,57,wps_next)
 %T(0,0,51,57,ffwd,repeat_press)
-%?mp<%xd(fastforward,2)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)>
+%?if(%mp,=,1)<%xd(fastforward,2)|%xd(fastforward,1)>
 #
 # PLAYMODE
 #
@@ -47,7 +48,7 @@
 %V(171,423,49,57,-)
 %T(0,0,49,57,wps_prev)
 %T(0,0,49,57,rwd,repeat_press)
-%?mp<%xd(rewind,2)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)>
+%?if(%mp,=,1)<%xd(rewind,2)|%xd(rewind,1)>
 #
 # SHUFFLE
 #
@@ -67,7 +68,7 @@
 #
 %V(0,423,62,57,-)
 %T(0,0,62,57,mute,long_press)
-%pv(4,8,56,40,cabbiev2-volume-320x480x24.bmp,backdrop,volume-backdrop)
+%pv(4,8,56,40,image,volume,backdrop,volume-backdrop)
 #
 # UI VIEWPORT
 #
