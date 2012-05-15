@@ -1,7 +1,8 @@
-# THEME       : cabbiev2
-# TARGET(S)   : Rockbox as an Application 480x800 Portrait
-# AUTHOR      : Hayden Pearce
-# DATE        : © Hayden Pearce 02/04/12 Monday 2nd - April - 2012
+# THEME       	: cabbiev2
+# TARGET(S)		: Rockbox as an Application 480x800 Portrait
+# DATE			: 16/05/12 Wednesday 15th - May - 2012
+# COPYRIGHT		: © Hayden Pearce 2011-2012
+#
 #
 # DISABLE STATUSBAR
 #
