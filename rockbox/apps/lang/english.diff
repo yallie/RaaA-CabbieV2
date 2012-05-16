@@ -1,0 +1,151 @@
+diff --git a/apps/lang/english.lang b/apps/lang/english.lang
+index cd575e9..9f8ce06 100644
+--- a/apps/lang/english.lang
++++ b/apps/lang/english.lang
+@@ -10627,13 +10627,13 @@
+ </phrase>
+ <phrase>
+   id: VOICE_QUICKSCREEN
+-  desc: spoken only, Announces entering the "quick screen"
++  desc: voiced, also used by default theme
+   user: core
+   <source>
+-    *: ""
++    *: "Quickscreen"
+   </source>
+   <dest>
+-    *: ""
++    *: "Quickscreen"
+   </dest>
+   <voice>
+     *: "Quick screen"
+@@ -13038,3 +13038,129 @@
+     *: "Start Sleep Timer"
+   </voice>
+ </phrase>
++<phrase>
++  id: LANG_CHARGING
++  desc: used by default theme
++  user: core
++  <source>
++    *: "Charging"
++  </source>
++  <dest>
++    *: "Charging"
++  </dest>
++  <voice>
++    *: ""
++  </voice>
++</phrase>
++<phrase>
++  id: LANG_CHARGED
++  desc: used by default theme
++  user: core
++  <source>
++    *: "Charged"
++  </source>
++  <dest>
++    *: "Charged"
++  </dest>
++  <voice>
++    *: ""
++  </voice>
++</phrase>
++<phrase>
++  id: LANG_FASTFORWARD
++  desc: used by default theme
++  user: core
++  <source>
++    *: "Fastforward"
++  </source>
++  <dest>
++    *: "Fastforward"
++  </dest>
++  <voice>
++    *: ""
++  </voice>
++</phrase>
++<phrase>
++  id: LANG_FILE_BROWSER
++  desc: used by default theme
++  user: core
++  <source>
++    *: "File Browser"
++  </source>
++  <dest>
++    *: "File Browser"
++  </dest>
++  <voice>
++    *: ""
++  </voice>
++</phrase>
++<phrase>
++  id: LANG_REWIND
++  desc: used by default theme
++  user: core
++  <source>
++    *: "Rewind"
++  </source>
++  <dest>
++    *: "Rewind"
++  </dest>
++  <voice>
++    *: ""
++  </voice>
++</phrase>
++<phrase>
++  id: LANG_PITCH_SCREEN
++  desc: used by default theme
++  user: core
++  <source>
++    *: "Pitch Screen"
++  </source>
++  <dest>
++    *: "Pitch Screen"
++  </dest>
++  <voice>
++    *: ""
++  </voice>
++</phrase>
++<phrase>
++  id: LANG_SCREEN_LOCKED
++  desc: used by default theme
++  user: core
++  <source>
++    *: "Screen Locked"
++  </source>
++  <dest>
++    *: "Screen Locked"
++  </dest>
++  <voice>
++    *: ""
++  </voice>
++</phrase>
++<phrase>
++  id: LANG_SCREEN_UNLOCKED
++  desc: used by default theme
++  user: core
++  <source>
++    *: "Screen Unlocked"
++  </source>
++  <dest>
++    *: "Screen Unlocked"
++  </dest>
++  <voice>
++    *: ""
++  </voice>
++</phrase>
++<phrase>
++  id: LANG_TRACK INFO
++  desc: used by default theme
++  user: core
++  <source>
++    *: "Track Info"
++  </source>
++  <dest>
++    *: "Track Info"
++  </dest>
++  <voice>
++    *: "Track Info"
++  </voice>
++</phrase>
