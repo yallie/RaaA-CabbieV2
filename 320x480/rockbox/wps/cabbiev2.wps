@@ -1,6 +1,6 @@
 # THEME			: cabbiev2
 # TARGET(S)		: Rockbox as an Application 320x480 Portrait
-# DATE			: 16/05/12 Wednesday 15th - May - 2012
+# DATE			: 05/06/12 Tuesday 5th - June - 2012
 # COPYRIGHT		: © Hayden Pearce 2011-2012
 #
 #
@@ -22,21 +22,22 @@
 # PRELOAD IMAGES
 #
 %xl(albumart-backdrop,cabbiev2-albumart-backdrop-320x480x24.bmp,0,0)
-%xl(fastforward,cabbiev2-fastforward-320x480x24.bmp,2,6,2)
-%xl(playmode,cabbiev2-playmode-320x480x24.bmp,2,6,5)
+%xl(fastforward-rewind,cabbiev2-fastforward-rewind-320x480x24.bmp,6,5,4)
+%xl(playmode,cabbiev2-playmode-320x480x24.bmp,6,5,6)
 %xl(popup,cabbiev2-popup-320x480x24.bmp,0,0)
 %xl(progressbar,cabbiev2-progressbar-320x480x24.bmp,0,0)
 %xl(progressbar-backdrop,cabbiev2-progressbar-backdrop-320x480x24.bmp,0,0)
-%xl(repeat,cabbiev2-repeat-320x480x24.bmp,2,4,5)
-%xl(rewind,cabbiev2-rewind-320x480x24.bmp,2,6,2)
-%xl(shuffle,cabbiev2-shuffle-320x480x24.bmp,2,13,2)
-%xl(titlebar,cabbiev2-titlebar-320x480x24.bmp,6,6,26)
+%xl(repeat,cabbiev2-repeat-320x480x24.bmp,6,5,10)
+%xl(shuffle,cabbiev2-shuffle-320x480x24.bmp,6,5,4)
+%xl(titlebar,cabbiev2-titlebar-320x480x24.bmp,5,5,26)
 %xl(unlock-notification,cabbiev2-unlock-notification-320x480x24.bmp,0,0)
 %xl(volume,cabbiev2-volume-320x480x24.bmp,0,0)
 %xl(volume-backdrop,cabbiev2-volume-backdrop-320x480x24.bmp,0,0)
-%xl(volume-popup,cabbiev2-volume-popup-320x480x24.bmp,0,0)
+%xl(volume-backdrop-rtl,cabbiev2-volume-backdrop-rtl-320x480x24.bmp,0,0)
 %xl(volumebar,cabbiev2-volumebar-320x480x24.bmp,0,0)
 %xl(volumebar-backdrop,cabbiev2-volumebar-backdrop-320x480x24.bmp,0,0)
+%xl(volume-popup,cabbiev2-volume-popup-320x480x24.bmp,0,0)
+%xl(volume-rtl,cabbiev2-volume-rtl-320x480x24.bmp,0,0)
 #
 # VIEWPORT CONDITIONS
 #
@@ -84,10 +85,10 @@
 #
 # FASTFORWARD/NEXT
 #
-%V(269,423,51,57,-)
+%ax%V(269,423,51,57,-)
 %T(0,0,51,57,next)
 %T(0,0,51,57,ffwd,repeat_press)
-%?mp<%xd(fastforward,2)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)|%xd(fastforward,1)||||>
+%?Sr<%?if(%mp,=,1)<%xd(fastforward-rewind,4)|%xd(fastforward-rewind,2)>|%?if(%mp,=,1)<%xd(fastforward-rewind,3)|%xd(fastforward-rewind,1)>>
 #
 # NEXT TRACK INFO - ALBUM ART
 #
@@ -107,10 +108,10 @@
 #
 # PLAYMODE
 #
-%V(220,423,49,57,-)
+%ax%V(220,423,49,57,-)
 %T(0,0,49,57,play)
 %T(0,0,49,57,stop,long_press)
-%?mp<%xd(playmode,1)|%xd(playmode,3)|%xd(playmode,2)|%xd(playmode,4)|%xd(playmode,5)||||>
+%?mp<%xd(playmode,1)|%xd(playmode,4)|%?Sr<%xd(playmode,3)|%xd(playmode,2)>|%?Sr<%xd(playmode,6)|%xd(playmode,5)>|%?Sr<%xd(playmode,5)|%xd(playmode,6)>||||>
 #
 # POPUP
 #
@@ -128,24 +129,24 @@
 #
 # REPEAT
 #
-%V(62,423,40,57,-)
+%ax%V(62,423,40,57,-)
 %T(0,0,40,57,repmode)
 %T(0,0,40,57,setting_set,repeat,off,long_press)
-%?mm<%xd(repeat,1)|%xd(repeat,2)|%xd(repeat,3)|%xd(repeat,4)|%xd(repeat,5)>
+%?Sr<%?mm<%xd(repeat,2)|%xd(repeat,4)|%xd(repeat,6)|%xd(repeat,8)|%xd(repeat,10)>|%?mm<%xd(repeat,1)|%xd(repeat,3)|%xd(repeat,5)|%xd(repeat,7)|%xd(repeat,9)>>
 #
 # REWIND/PREVIOUS
 #
-%V(171,423,49,57,-)
+%ax%V(171,423,49,57,-)
 %T(0,0,49,57,prev)
 %T(0,0,49,57,rwd,repeat_press)
-%?mp<%xd(rewind,2)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)|%xd(rewind,1)||||>
+%?Sr<%?if(%mp,=,1)<%xd(fastforward-rewind,3)|%xd(fastforward-rewind,1)>|%?if(%mp,=,1)<%xd(fastforward-rewind,4)|%xd(fastforward-rewind,2)>>
 #
 # SHUFFLE
 #
-%V(102,423,69,57,-)
+%ax%V(102,423,69,57,-)
 %T(0,0,69,57,shuffle)
 %T(0,0,69,57,setting_set,shuffle,off,long_press)
-%?ps<%xd(shuffle,1)|%xd(shuffle,2)>
+%?Sr<%?ps<%xd(shuffle,2)|%xd(shuffle,4)>|%?ps<%xd(shuffle,1)|%xd(shuffle,3)>>
 #
 # TITLEBAR
 #
@@ -161,10 +162,10 @@
 #
 # VOLUME
 #
-%V(0,423,62,57,-)
+%ax%V(0,423,62,57,-)
 %T(volume-touch,0,0,62,57,none)
 %T(0,0,62,57,mute,long_press)
-%pv(4,8,56,40,image,volume,backdrop,volume-backdrop)
+%?Sr<%pv(4,8,56,40,image,volume-rtl,backdrop,volume-backdrop-rtl,invert)|%pv(4,8,56,40,image,volume,backdrop,volume-backdrop)>
 
 
 
@@ -177,4 +178,4 @@
 %Vl(volume-popup-viewport,12,258,296,100,-)
 %T(6,6,284,88,volume)
 %xd(volume-popup)
-%pv(18,40,260,20,image,volumebar,backdrop,volumebar-backdrop)
+%?Sr<%pv(18,40,260,20,image,volumebar,backdrop,volumebar-backdrop,invert)|%pv(18,40,260,20,image,volumebar,backdrop,volumebar-backdrop)>
