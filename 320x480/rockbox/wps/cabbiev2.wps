@@ -1,6 +1,6 @@
 # THEME			: cabbiev2
 # TARGET(S)		: Rockbox as an Application 320x480 Portrait
-# DATE			: 05/06/12 Tuesday 5th - June - 2012
+# DATE			: 11/09/12 Tuesday 11th - September - 2012
 # COPYRIGHT		: © Hayden Pearce 2011-2012
 #
 #
@@ -124,8 +124,7 @@
 # PROGRESSBAR
 #
 %V(14,363,292,32,-)
-%T(0,0,292,32,progressbar)
-%?Sr<%pb(6,6,280,20,image,progressbar,backdrop,progressbar-backdrop,invert)|%pb(6,6,280,20,image,progressbar,backdrop,progressbar-backdrop)>
+%pb(6,6,280,20,image,progressbar,backdrop,progressbar-backdrop)
 #
 # REPEAT
 #
@@ -165,7 +164,7 @@
 %ax%V(0,423,62,57,-)
 %T(volume-touch,0,0,62,57,none)
 %T(0,0,62,57,mute,long_press)
-%?Sr<%pv(4,8,56,40,image,volume-rtl,backdrop,volume-backdrop-rtl,invert)|%pv(4,8,56,40,image,volume,backdrop,volume-backdrop)>
+%?Sr<%pv(4,8,56,40,image,volume-rtl,backdrop,volume-backdrop-rtl,notouch)|%pv(4,8,56,40,image,volume,backdrop,volume-backdrop,notouch)>
 
 
 
@@ -176,6 +175,5 @@
 # VOLUME POPUP
 #
 %Vl(volume-popup-viewport,12,258,296,100,-)
-%T(6,6,284,88,volume)
 %xd(volume-popup)
-%?Sr<%pv(18,40,260,20,image,volumebar,backdrop,volumebar-backdrop,invert)|%pv(18,40,260,20,image,volumebar,backdrop,volumebar-backdrop)>
+%pv(18,40,260,20,image,volumebar,backdrop,volumebar-backdrop)
