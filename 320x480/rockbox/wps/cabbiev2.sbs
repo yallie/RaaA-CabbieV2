@@ -70,7 +70,7 @@
 #
 %ax%V(0,423,62,57,-)
 %T(0,0,62,57,mute,long_press)
-%?Sr<%pv(4,8,56,40,image,volume-rtl,backdrop,volume-backdrop-rtl,notouch)|%pv(4,8,56,40,image,volume,backdrop,volume-backdrop,notouch)>
+%?Sr<%pv(4,8,56,40,image,volume-rtl,backdrop,volume-backdrop-rtl,invert,notouch)|%pv(4,8,56,40,image,volume,backdrop,volume-backdrop,notouch)>
 #
 # UI VIEWPORT
 #
