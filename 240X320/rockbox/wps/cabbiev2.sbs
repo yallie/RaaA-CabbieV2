@@ -1,6 +1,6 @@
 # THEME         : cabbiev2
 # TARGET(S)     : Rockbox as an Application 240x320 Portrait
-# DATE          : 18/09/12 Tuesday 18th - September - 2012
+# DATE          : 21/09/12 Friday 21st - September - 2012
 # COPYRIGHT     : © Hayden Pearce 2011-2012
 #
 #
@@ -70,7 +70,7 @@
 #
 %ax%V(1,288,46,32,-)
 %T(0,0,46,32,mute,long_press)
-%?Sr<%pv(6,5,34,23,image,volume-rtl,backdrop,volume-backdrop-rtl,notouch)|%pv(6,5,34,23,image,volume,backdrop,volume-backdrop,notouch)>
+%?Sr<%pv(6,5,34,23,image,volume-rtl,backdrop,volume-backdrop-rtl,invert,notouch)|%pv(6,5,34,23,image,volume,backdrop,volume-backdrop,notouch)>
 #
 # UI VIEWPORT
 #
