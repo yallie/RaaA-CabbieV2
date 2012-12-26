@@ -133,7 +133,7 @@
 #
 # REPEAT
 #
-%ax%V(96,648,56,90,-)
+%ax%V(96,656,56,90,-)
 %T(0,0,56,90,repmode)
 %T(0,0,56,90,setting_set,repeat,off,long_press)
 %?Sr<%?mm<%xd(repeat,2)|%xd(repeat,4)|%xd(repeat,6)|%xd(repeat,8)|%xd(repeat,10)>|%?mm<%xd(repeat,1)|%xd(repeat,3)|%xd(repeat,5)|%xd(repeat,7)|%xd(repeat,9)>>
@@ -147,7 +147,7 @@
 #
 # SHUFFLE
 #
-%ax%V(152,648,98,90,-)
+%ax%V(152,664,98,90,-)
 %T(0,0,98,90,shuffle)
 %T(0,0,98,90,setting_set,shuffle,off,long_press)
 %?Sr<%?ps<%xd(shuffle,2)|%xd(shuffle,4)>|%?ps<%xd(shuffle,1)|%xd(shuffle,3)>>
