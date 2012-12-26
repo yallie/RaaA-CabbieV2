@@ -94,8 +94,8 @@
 #
 %Vl(next-track-albumart-viewport,20,512,440,44,3)
 %T(0,0,440,71,next,long_press)
-%s%ac%?Fn<%Sx(Next Track:)|%?ig<%ig>>
-%s%ac%?Fn<%t(10.0)%?It<%It|%Fn>;%t(10.0)%?Ia<%Ia|%?D(2)<%D(2)|%(root%)>> - %?Id<%Id|%?D(1)<%D(1)|%(root%)>>|%?iy<%iy>>
+#%s%ac%?Fn<%Sx(Next Track:)|%?ig<%ig>>
+%s%ac%?Fn<%t(5)%?Fn<%Sx(Next Track:)|%?ig<%ig>>;%t(5)%?It<%It|%Fn>;%t(5)%?Ia<%Ia|%?D(2)<%D(2)|%(root%)>> - %?Id<%Id|%?D(1)<%D(1)|%(root%)>>|%?iy<%iy>>
 #
 # NEXT TRACK INFO - NO ALBUM ART
 #
@@ -105,11 +105,6 @@
 %s%ac%?Fn<%?It<%It|%Fn>>
 %s%ac%?Fn<%?Ia<%Ia|%?D(2)<%D(2)|%(root%)>>>
 %s%ac%?Fn<%?Id<%Id|%?D(1)<%D(1)|%(root%)>>>
-#
-# TIME ELAPSED/REMAINING
-#
-%V(20,560,440,36,3)
-%aL%pc%ac%?mv(2.0)<%vs(variable,set,2)%?Sr<dB%pv :%Sx(Volume)|%Sx(Volume): %pvdB>|%?Sr<%pe %Sx(of) %pp|%pp %Sx(of) %pe>>%aR-%pr
 #
 # PLAYMODE
 #
@@ -128,8 +123,13 @@
 #
 # PROGRESSBAR
 #
-%V(15,597,440,51,-)
+%V(15,560,440,51,-)
 %pb(10,10,430,31,image,progressbar,backdrop,progressbar-backdrop)
+#
+# TIME ELAPSED/REMAINING
+#
+%V(20,612,440,36,3)
+%aL%pc%ac%?mv(2.0)<%vs(variable,set,2)%?Sr<dB%pv :%Sx(Volume)|%Sx(Volume): %pvdB>|%?Sr<%pe %Sx(of) %pp|%pp %Sx(of) %pe>>%aR-%pr
 #
 # REPEAT
 #
