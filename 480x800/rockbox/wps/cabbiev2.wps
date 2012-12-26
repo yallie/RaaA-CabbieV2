@@ -92,7 +92,7 @@
 #
 # NEXT TRACK INFO - ALBUM ART
 #
-%Vl(next-track-albumart-viewport,20,512,440,72,3)
+%Vl(next-track-albumart-viewport,20,512,440,44,3)
 %T(0,0,440,71,next,long_press)
 %s%ac%?Fn<%Sx(Next Track:)|%?ig<%ig>>
 %s%ac%?Fn<%t(10.0)%?It<%It|%Fn>;%t(10.0)%?Ia<%Ia|%?D(2)<%D(2)|%(root%)>> - %?Id<%Id|%?D(1)<%D(1)|%(root%)>>|%?iy<%iy>>
@@ -105,6 +105,11 @@
 %s%ac%?Fn<%?It<%It|%Fn>>
 %s%ac%?Fn<%?Ia<%Ia|%?D(2)<%D(2)|%(root%)>>>
 %s%ac%?Fn<%?Id<%Id|%?D(1)<%D(1)|%(root%)>>>
+#
+# TIME ELAPSED/REMAINING
+#
+%V(20,560,440,36,3)
+%aL%pc%ac%?mv(2.0)<%vs(variable,set,2)%?Sr<dB%pv :%Sx(Volume)|%Sx(Volume): %pvdB>|%?Sr<%pe %Sx(of) %pp|%pp %Sx(of) %pe>>%aR-%pr
 #
 # PLAYMODE
 #
@@ -153,11 +158,6 @@
 %T(0,0,450,51,menu)
 %T(0,0,450,51,lock,long_press)
 %?if(%mh,=,t)<%?Tl(2.0)<%xd(unlock-notification)|%xd(titlebar,1)>|%?mp<|%xd(titlebar,5)|%xd(titlebar,6)|%xd(titlebar,7)|%xd(titlebar,8)||||>>
-#
-# TIME ELAPSED/REMAINING
-#
-#%V(20,660,440,36,3)
-#%aL%pc%ac%?mv(2.0)<%vs(variable,set,2)%?Sr<dB%pv :%Sx(Volume)|%Sx(Volume): %pvdB>|%?Sr<%pe %Sx(of) %pp|%pp %Sx(of) %pe>>%aR-%pr
 #
 # VOLUME
 #
