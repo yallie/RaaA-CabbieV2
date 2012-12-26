@@ -26,35 +26,35 @@
 #
 # FASTFORWARD/NEXT
 #
-%ax%V(402,708,78,90,-)
+%ax%V(402,648,78,90,-)
 %T(0,0,78,90,wps_next)
 %T(0,0,78,90,ffwd,repeat_press)
 %?Sr<%?if(%mp,=,1)<%xd(fastforward-rewind,4)|%xd(fastforward-rewind,2)>|%?if(%mp,=,1)<%xd(fastforward-rewind,3)|%xd(fastforward-rewind,1)>>
 #
 # PLAYMODE
 #
-%ax%V(326,708,76,90,-)
+%ax%V(326,648,76,90,-)
 %T(0,0,76,90,play)
 %T(0,0,76,90,stop,long_press)
 %?mp<%xd(playmode,1)|%xd(playmode,4)|%?Sr<%xd(playmode,3)|%xd(playmode,2)>|%?Sr<%xd(playmode,6)|%xd(playmode,5)>|%?Sr<%xd(playmode,5)|%xd(playmode,6)>||||>
 #
 # REPEAT
 #
-%ax%V(96,708,56,90,-)
+%ax%V(96,648,56,90,-)
 %T(0,0,56,90,repmode)
 %T(0,0,56,90,setting_set,repeat,off,long_press)
 %?Sr<%?mm<%xd(repeat,2)|%xd(repeat,4)|%xd(repeat,6)|%xd(repeat,8)|%xd(repeat,10)>|%?mm<%xd(repeat,1)|%xd(repeat,3)|%xd(repeat,5)|%xd(repeat,7)|%xd(repeat,9)>>
 #
 # REWIND/PREVIOUS
 #
-%ax%V(250,708,76,90,-)
+%ax%V(250,648,76,90,-)
 %T(0,0,76,90,wps_prev)
 %T(0,0,76,90,rwd,repeat_press)
 %?Sr<%?if(%mp,=,1)<%xd(fastforward-rewind,3)|%xd(fastforward-rewind,1)>|%?if(%mp,=,1)<%xd(fastforward-rewind,4)|%xd(fastforward-rewind,2)>>
 #
 # SHUFFLE
 #
-%ax%V(152,708,98,90,-)
+%ax%V(152,648,98,90,-)
 %T(0,0,98,90,shuffle)
 %T(0,0,98,90,setting_set,shuffle,off,long_press)
 %?Sr<%?ps<%xd(shuffle,2)|%xd(shuffle,4)>|%?ps<%xd(shuffle,1)|%xd(shuffle,3)>>
@@ -68,10 +68,10 @@
 #
 # VOLUME
 #
-%ax%V(0,708,96,90,-)
+%ax%V(0,648,96,90,-)
 %T(0,0,96,90,mute,long_press)
 %?Sr<%pv(5,12,88,66,image,volume-rtl,backdrop,volume-backdrop-rtl,invert,notouch)|%pv(5,12,88,66,image,volume,backdrop,volume-backdrop,notouch)>
 #
 # UI VIEWPORT
 #
-%Vi(-,20,80,460,624,-)
+%Vi(-,20,80,460,564,-)
